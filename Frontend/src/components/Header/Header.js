@@ -80,7 +80,7 @@ const Header = () => {
 
   return (
     <AppBar position="static">
-      <Container maxWidth="xl" sx={{ zIndex: "2" }}>
+      <Container maxWidth="100%" sx={{ zIndex: "2" }}>
         <Toolbar
           disableGutters
           sx={{ display: { md: "flex" }, justifyContent: "flex-end" }}
@@ -105,7 +105,6 @@ const Header = () => {
               display: { xs: "none", md: "flex" },
               fontFamily: "Montserrat",
               fontWeight: 700,
-              color: "#FFFFFF",
               letterSpacing: ".3rem",
               textDecoration: "none",
             }}

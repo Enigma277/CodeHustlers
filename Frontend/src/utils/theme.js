@@ -2,9 +2,6 @@ import { createTheme } from "@mui/material/styles";
 
 export const DarkTheme = createTheme({
   palette: {
-    primary: {
-      main: "#1C2834",
-    },
     background: {
       default: "#0D1B2A",
     },
@@ -71,9 +68,6 @@ export const DarkTheme = createTheme({
             color: "#FFFFFF",
             backgroundColor: "#0d1b2a",
           },
-          // "&:selected": {
-          //   backgroundColor: "black",
-          // },
         },
         selected: {
           "&.Mui-selected": {
@@ -163,9 +157,6 @@ export const DarkTheme = createTheme({
 
 export const LightTheme = createTheme({
   palette: {
-    primary: {
-      main: "#1C2834",
-    },
     background: {
       default: "#AEE2FF",
     },
@@ -178,8 +169,6 @@ export const LightTheme = createTheme({
   },
   typography: {
     fontFamily: "Poppins",
-    color: "black",
-    // color: "#0d1b2a",
     h1: {
       fontSize: "5rem",
       "@media (max-width:600px)": {
@@ -201,10 +190,18 @@ export const LightTheme = createTheme({
   },
 
   components: {
+    MuiTypography: {
+      styleOverrides: {
+        root: {
+          color: "#000",
+        },
+      },
+    },
     MuiContainer: {
       styleOverrides: {
         root: {
           backgroundColor: "#93C6E7",
+          color: "#000000",
         },
       },
     },
@@ -212,6 +209,7 @@ export const LightTheme = createTheme({
       styleOverrides: {
         root: {
           borderRadius: "10px",
+          color: "#000",
         },
       },
     },
@@ -254,10 +252,7 @@ export const LightTheme = createTheme({
     MuiInputLabel: {
       styleOverrides: {
         root: {
-          color: "#FFFFFF",
-          label: {
-            color: "#FFFFFF",
-          },
+          color: "#000",
         },
       },
     },
