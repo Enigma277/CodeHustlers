@@ -294,11 +294,12 @@ int main()
       <Box
         sx={{
           display: "flex",
-          gap: "2rem",
+          gap: "3rem",
           margin: "1rem",
           justifyContent: "space-around",
           alignItems: "flex-end",
-          height: "88vh",
+          height: "100vh",
+          zIndex: "0",
         }}
       >
         <div
@@ -314,7 +315,7 @@ int main()
           <InputLabel
             id="demo-simple-select-label"
             sx={{
-              margin: "10px 0 5px .2rem",
+              margin: "13px 10px 5px .2rem",
             }}
           >
             Select a language

@@ -1,4 +1,3 @@
-import React from "react";
 import { createTheme } from "@mui/material/styles";
 
 export const DarkTheme = createTheme({
@@ -39,6 +38,13 @@ export const DarkTheme = createTheme({
     },
   },
   components: {
+    MuiContainer: {
+      styleOverrides: {
+        root: {
+          backgroundColor: "#023047",
+        },
+      },
+    },
     MuiButton: {
       styleOverrides: {
         root: {
@@ -47,6 +53,15 @@ export const DarkTheme = createTheme({
         },
       },
     },
+    MuiSelect: {
+      styleOverrides: {
+        root: {
+          color: "#FFFFFF",
+          backgroundColor: "#023047",
+        },
+      },
+    },
+
     MuiMenuItem: {
       styleOverrides: {
         root: {
@@ -56,14 +71,16 @@ export const DarkTheme = createTheme({
             color: "#FFFFFF",
             backgroundColor: "#0d1b2a",
           },
+          // "&:selected": {
+          //   backgroundColor: "black",
+          // },
         },
-      },
-    },
-    MuiSelect: {
-      styleOverrides: {
-        root: {
-          color: "#FFFFFF",
-          backgroundColor: "#023047",
+        selected: {
+          "&.Mui-selected": {
+            backgroundColor: "turquoise",
+            color: "black",
+            fontWeight: 600,
+          },
         },
       },
     },
@@ -150,7 +167,7 @@ export const LightTheme = createTheme({
       main: "#1C2834",
     },
     background: {
-      default: "#bde0fe",
+      default: "#AEE2FF",
     },
     secondary: {
       main: "#e0e1dd",
@@ -161,16 +178,40 @@ export const LightTheme = createTheme({
   },
   typography: {
     fontFamily: "Poppins",
-    color: "#0d1b2a",
+    color: "black",
+    // color: "#0d1b2a",
+    h1: {
+      fontSize: "5rem",
+      "@media (max-width:600px)": {
+        fontSize: "3rem",
+      },
+      "@media (max-width:900px)": {
+        fontSize: "4rem",
+      },
+      "@media (max-width:1200px)": {
+        fontSize: "3rem",
+      },
+      "@media (max-width:1600px)": {
+        fontSize: "4rem",
+      },
+      "@media (max-width:2000px)": {
+        fontSize: "3rem",
+      },
+    },
   },
 
   components: {
+    MuiContainer: {
+      styleOverrides: {
+        root: {
+          backgroundColor: "#93C6E7",
+        },
+      },
+    },
     MuiButton: {
       styleOverrides: {
         root: {
           borderRadius: "10px",
-          color: "#FFFFFF",
-          backgroundColor: "#023047",
         },
       },
     },
@@ -261,13 +302,6 @@ export const LightTheme = createTheme({
       styleOverrides: {
         root: {
           borderRadius: "10px",
-        },
-      },
-    },
-    MuiIcons: {
-      styleOverrides: {
-        root: {
-          color: "#0f172a",
         },
       },
     },

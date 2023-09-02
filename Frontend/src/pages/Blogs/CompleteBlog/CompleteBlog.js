@@ -6,7 +6,6 @@ import parse from "html-react-parser";
 import dateFormatter from "../../../utils/dateFormatter";
 import ServerURL from "../../../utils/ServerURL";
 import Header from "../../../components/Header/Header";
-// import textToSpeech from
 
 const CompleteBlog = () => {
   const { id } = useParams();

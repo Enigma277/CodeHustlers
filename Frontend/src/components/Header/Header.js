@@ -20,14 +20,13 @@ import Tooltip from "@mui/material/Tooltip";
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 import { googleLogout } from "@react-oauth/google";
 import { useMediaQuery, useTheme } from "@mui/material";
-import logo from "./logo.jpeg";
 import { toast } from "react-toastify";
 
 const Header = () => {
   const navigate = useNavigate();
   const { darkMode, setDarkMode } = useContext(AuthContext);
-  const pages = ["Practice", "Contests", "Events", "Compiler", "Blogs"];
-  const settings = ["Profile", "Account", "Dashboard"];
+  const pages = ["Compiler", "Blogs"];
+  const settings = ["Profile", "Dashboard"];
 
   const [anchorElNav, setAnchorElNav] = useState(null);
   const [anchorElUser, setAnchorElUser] = useState(null);
@@ -81,8 +80,11 @@ const Header = () => {
 
   return (
     <AppBar position="static">
-      <Container maxWidth="xl">
-        <Toolbar disableGutters>
+      <Container maxWidth="xl" sx={{ zIndex: "2" }}>
+        <Toolbar
+          disableGutters
+          sx={{ display: { md: "flex" }, justifyContent: "flex-end" }}
+        >
           {/* <img
             src={logo}
             style={{
@@ -97,7 +99,7 @@ const Header = () => {
             variant="h1"
             noWrap
             component="a"
-            href="/"
+            onClick={() => navigate("/")}
             sx={{
               mr: 2,
               display: { xs: "none", md: "flex" },
@@ -110,7 +112,7 @@ const Header = () => {
           >
             GEEKERS
           </Typography>
-          <HomeIcon
+          {/* <HomeIcon
             sx={{
               display: { xs: "none", md: "flex" },
               ml: 5,
@@ -120,7 +122,7 @@ const Header = () => {
             onClick={() => {
               navigate("/home");
             }}
-          />
+          /> */}
           {isMobile ? (
             <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
               <IconButton
@@ -196,7 +198,7 @@ const Header = () => {
             variant="h1"
             noWrap
             component="a"
-            href=""
+            onClick={() => navigate("/")}
             className="headerName"
             sx={{
               mr: 2,
@@ -206,6 +208,7 @@ const Header = () => {
               fontWeight: 700,
               fontSize: ".7rem",
               color: "#FFFFFF",
+              cursor: "pointer",
               letterSpacing: ".3rem",
             }}
           >
