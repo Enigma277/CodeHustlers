@@ -172,7 +172,7 @@ const Header = () => {
           ) : (
             <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
               {pages.map((page, index) => (
-                <Button
+                <Typography
                   key={index}
                   onClick={(handleCloseNavMenu, () => handleClick(index))}
                   sx={{
@@ -181,7 +181,8 @@ const Header = () => {
                     display: "block",
                     fontWeight: "bold",
                     fontSize: "1rem",
-                    letterSpacing: ".1rem",
+                    // letterSpacing: ".1rem",
+                    cursor: "pointer",
                     "&:hover": {
                       transform: "scale(.8)",
                       boxShadow: "0 5px 10px rgba(0, 0, 0, 0.3)",
@@ -189,7 +190,7 @@ const Header = () => {
                   }}
                 >
                   {page}
-                </Button>
+                </Typography>
               ))}
             </Box>
           )}
@@ -289,7 +290,7 @@ const Header = () => {
                   key={index}
                   onClick={(handleCloseUserMenu, () => handleSettings(index))}
                 >
-                  <Typography textAlign="center">{setting}</Typography>
+                  {setting}
                 </MenuItem>
               ))}
             </Menu>

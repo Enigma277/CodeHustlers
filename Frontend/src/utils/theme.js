@@ -46,7 +46,12 @@ export const DarkTheme = createTheme({
       styleOverrides: {
         root: {
           borderRadius: "10px",
-          color: "#FFFFFF",
+          backgroundColor: "#FFFFFF",
+          color: "#000",
+          "&:hover": {
+            color: "#FFFFFF",
+            backgroundColor: "#0d1b2a",
+          },
         },
       },
     },
@@ -62,8 +67,8 @@ export const DarkTheme = createTheme({
     MuiMenuItem: {
       styleOverrides: {
         root: {
-          color: "#FFFFFF",
-          backgroundColor: "#023047",
+          color: "#023047",
+          backgroundColor: "#FFFFFF",
           "&:hover": {
             color: "#FFFFFF",
             backgroundColor: "#0d1b2a",
@@ -209,7 +214,8 @@ export const LightTheme = createTheme({
       styleOverrides: {
         root: {
           borderRadius: "10px",
-          color: "#000",
+          color: "#FFFFFF",
+          backgroundColor: "#000",
         },
       },
     },
@@ -259,11 +265,11 @@ export const LightTheme = createTheme({
     MuiMenuItem: {
       styleOverrides: {
         root: {
-          color: "#FFFFFF",
-          backgroundColor: "#023047",
+          color: "#000",
+          backgroundColor: "#FFFFFF",
           "&:hover": {
-            color: "#FFFFFF",
-            backgroundColor: "#0d1b2a",
+            color: "#0d1b2a",
+            backgroundColor: "#93C6E7",
           },
         },
       },
