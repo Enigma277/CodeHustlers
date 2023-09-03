@@ -17,7 +17,14 @@ const Home = () => {
           <source src={videoFile} type="video/mp4" />
         </video>
       </div>
-      <div className={style.container}>
+      <Box
+        sx={{
+          height: "85vh",
+          display: "flex",
+          flexDirection: "column",
+          justifyContent: "center",
+        }}
+      >
         <header>Explore Learn Build</header>
         <Box
           sx={{
@@ -29,12 +36,13 @@ const Home = () => {
           }}
         >
           <Box
-            sx={{
+            style={{
               display: "flex",
               gap: "4rem",
               width: "80%",
               height: "80%",
               alignItems: "center",
+
               "@media (max-width:900px)": {
                 flexDirection: "column",
               },
@@ -49,6 +57,13 @@ const Home = () => {
                 width: "30rem",
                 borderRadius: "10px",
                 padding: "10px",
+
+                background: "rgba( 255, 255, 255, 0.05 )",
+                boxShadow: "0 8px 32px 0 rgba( 31, 38, 135, 0.37 )",
+                backdropFilter: "blur( 0px )",
+                WebkitBackdropFilter: "blur( 0px )",
+                borderRadius: "10px",
+                border: "1px solid rgba( 255, 255, 255, 0.18 )",
               }}
             >
               <Typography
@@ -60,7 +75,7 @@ const Home = () => {
               >
                 Compiler
               </Typography>
-              <Typography>
+              <Typography sx={{ textAlign: "justify" }}>
                 Dive into our compiler to experiment with code, test your
                 skills, and see real-time outputs. Collaborate with peers on
                 coding projects and learn by doing. Not only can you create and
@@ -68,9 +83,7 @@ const Home = () => {
                 snippets securely in your account. Need to access them later or
                 download them to your local system? We've got you covered.
               </Typography>
-              <Button
-                onClick={() => navigate("/compiler")}
-              >
+              <Button onClick={() => navigate("/compiler")}>
                 Get Started
                 <NavigateNextIcon></NavigateNextIcon>
               </Button>
@@ -84,6 +97,12 @@ const Home = () => {
                 width: "30rem",
                 borderRadius: "10px",
                 padding: "10px",
+                background: "rgba( 255, 255, 255, 0.05 )",
+                boxShadow: "0 8px 32px 0 rgba( 31, 38, 135, 0.37 )",
+                backdropFilter: "blur( 0px )",
+                WebkitBackdropFilter: "blur( 0px )",
+                borderRadius: "10px",
+                border: "1px solid rgba( 255, 255, 255, 0.18 )",
               }}
             >
               <Typography
@@ -95,26 +114,22 @@ const Home = () => {
               >
                 Blogs
               </Typography>
-              <Typography>
+              <Typography sx={{ textAlign: "justify" }}>
                 Empowerment through Sharing: We understand that learning is a
                 collaborative journey, and we want to give every student the
                 opportunity to share their knowledge and experiences with
                 others. Whether you're an aspiring writer, a coding enthusiast,
-                or just passionate about a subject, [Your App Name] is your
-                canvas to create, publish, and share your insights with the
-                world.
+                or just passionate about a subject, Geekers is your canvas to
+                create, publish, and share your insights with the world.
               </Typography>
-              <Button
-                onClick={() => navigate("/blogs")}
-                // sx={{ backgroundColor: "#FFFFFF" }}
-              >
+              <Button onClick={() => navigate("/blogs")}>
                 Get Started
                 <NavigateNextIcon></NavigateNextIcon>
               </Button>
             </Container>
           </Box>
         </Box>
-      </div>
+      </Box>
     </>
   );
 };

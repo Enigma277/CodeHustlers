@@ -73,12 +73,12 @@ export const DarkTheme = createTheme({
             color: "#FFFFFF",
             backgroundColor: "#0d1b2a",
           },
-        },
-        selected: {
           "&.Mui-selected": {
-            backgroundColor: "turquoise",
-            color: "black",
-            fontWeight: 600,
+            "&.Mui-selected": {
+              backgroundColor: "#0D3047",
+              color: "#FFFFFF",
+              fontWeight: 600,
+            },
           },
         },
       },
@@ -269,7 +269,14 @@ export const LightTheme = createTheme({
           backgroundColor: "#FFFFFF",
           "&:hover": {
             color: "#0d1b2a",
-            backgroundColor: "#93C6E7",
+            backgroundColor: "#AEE2FF",
+          },
+          "&.Mui-selected": {
+            "&.Mui-selected": {
+              backgroundColor: "#93C6E7",
+              color: "#000",
+              fontWeight: 600,
+            },
           },
         },
       },
@@ -277,8 +284,8 @@ export const LightTheme = createTheme({
     MuiSelect: {
       styleOverrides: {
         root: {
-          color: "#FFFFFF",
-          backgroundColor: "#023047",
+          color: "#000000",
+          backgroundColor: "#93C6E7",
         },
       },
     },
