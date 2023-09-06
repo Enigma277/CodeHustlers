@@ -7,6 +7,8 @@ import { Typography } from "@mui/material";
 import { Button } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 import NavigateNextIcon from "@mui/icons-material/NavigateNext";
+import useMediaQuery from "@mui/material/useMediaQuery";
+
 const Home = () => {
   const navigate = useNavigate();
   return (
@@ -28,7 +30,7 @@ const Home = () => {
         <header>Explore Learn Build</header>
         <Box
           sx={{
-            width: "100%",
+            width: "100vw",
             height: "70vh",
             display: "flex",
             justifyContent: "center",
@@ -36,16 +38,14 @@ const Home = () => {
           }}
         >
           <Box
+            className={style.Content}
             style={{
               display: "flex",
               gap: "4rem",
               width: "80%",
               height: "80%",
               alignItems: "center",
-
-              "@media (max-width:900px)": {
-                flexDirection: "column",
-              },
+              justifyContent: "space-between",
             }}
           >
             <Container
@@ -55,7 +55,6 @@ const Home = () => {
                 alignItems: "center",
                 gap: "1rem",
                 width: "30rem",
-                borderRadius: "10px",
                 padding: "10px",
 
                 background: "rgba( 255, 255, 255, 0.05 )",
@@ -95,7 +94,6 @@ const Home = () => {
                 alignItems: "center",
                 gap: "1rem",
                 width: "30rem",
-                borderRadius: "10px",
                 padding: "10px",
                 background: "rgba( 255, 255, 255, 0.05 )",
                 boxShadow: "0 8px 32px 0 rgba( 31, 38, 135, 0.37 )",

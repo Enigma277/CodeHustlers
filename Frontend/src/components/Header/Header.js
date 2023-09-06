@@ -80,7 +80,7 @@ const Header = () => {
 
   return (
     <AppBar position="static">
-      <Container maxWidth="100%" sx={{ zIndex: "2" }}>
+      <Container maxWidth="100%" sx={{ zIndex: "2", width: "100vw" }}>
         <Toolbar
           disableGutters
           sx={{ display: { md: "flex" }, justifyContent: "flex-end" }}

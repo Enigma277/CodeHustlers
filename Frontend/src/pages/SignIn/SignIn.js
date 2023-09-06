@@ -151,7 +151,7 @@ const SignIn = () => {
             id="outlined-password-input"
             label="Email"
             type="email"
-            pattern="^\w+([\.-]?\w+)@\w+([\.-]?\w+)(\.\w{2,3})+$"
+            inputProps={{ pattern: "[a-z0-9._%+-]+@[a-z0-9.-]+.[a-z]{2,}$" }}
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             required
